@@ -1,0 +1,26 @@
+{
+    "name": "ks",
+    "displayName": "Kirikiri Adventure Game (KAG) Script",
+    "description": "",
+    "version": "0.0.1",
+    "publisher": "happiness9721",
+    "engines": {
+        "vscode": "^1.5.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "ks",
+            "aliases": ["KAG Script", "ks"],
+            "extensions": [".ks"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "ks",
+            "scopeName": "source.ks",
+            "path": "./syntaxes/Kirikiri Adventure Game (KAG) Script.tmLanguage"
+        }]
+    }
+}
