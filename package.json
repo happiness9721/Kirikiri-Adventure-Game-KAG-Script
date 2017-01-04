@@ -1,15 +1,24 @@
 {
     "name": "ks",
     "displayName": "Kirikiri Adventure Game (KAG) Script",
-    "description": "",
+    "description": "Provides Kirikiri Adventure Game (KAG3) Script Language Support for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "happiness9721",
     "engines": {
         "vscode": "^1.5.0"
     },
+    "license": "MIT",
     "categories": [
         "Languages"
     ],
+    "private": false,
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/happiness9721/Kirikiri-Adventure-Game-KAG-Script.git"
+	},
+	"bugs": {
+		"url": "https://github.com/happiness9721/Kirikiri-Adventure-Game-KAG-Script/issues"
+	},
     "contributes": {
         "languages": [{
             "id": "ks",
