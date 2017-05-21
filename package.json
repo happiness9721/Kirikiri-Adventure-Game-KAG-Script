@@ -30,7 +30,7 @@
         "grammars": [{
             "language": "ks",
             "scopeName": "source.ks",
-            "path": "./syntaxes/Kirikiri Adventure Game (KAG) Script.tmLanguage"
+            "path": "./syntaxes/Kirikiri Adventure Game (KAG) Script.tmLanguage.json"
         }]
     }
 }
