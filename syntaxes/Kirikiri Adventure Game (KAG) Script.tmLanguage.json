@@ -1,0 +1,326 @@
+{
+    "fileTypes": [
+        "ks"
+    ],
+    "uuid": "c674c993-79bb-49f6-b152-c7e6cb2cc85d",
+    "patterns": [
+        {
+            "end": "(\\[)(endscript)(\\])",
+            "begin": "(\\[)(iscript)(\\])",
+            "beginCaptures": {
+                "3": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "1": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "2": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.tjs"
+                }
+            ],
+            "endCaptures": {
+                "3": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "1": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "2": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "name": "embedded-tjs.kag"
+        },
+        {
+            "end": "^[ \t]{0,}+(@)(endscript)",
+            "begin": "^[ \t]{0,}+(@)(iscript)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "2": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "patterns": [
+                {
+                    "include": "source.tjs"
+                }
+            ],
+            "endCaptures": {
+                "1": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "2": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "name": "embedded-tjs.kag"
+        },
+        {
+            "end": "(\\])",
+            "begin": "(\\[)([a-zA-Z0-9_]+)",
+            "beginCaptures": {
+                "1": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "2": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "patterns": [
+                {
+                    "end": "(')",
+                    "begin": "([\\w]+)\\s*(=)\\s*(')",
+                    "beginCaptures": {
+                        "3": {
+                            "name": "punctuation.definition.string.begin.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "([*])([\\w\\-_]+)",
+                            "captures": {
+                                "0": {
+                                    "name": "storage.type.label.kag"
+                                }
+                            },
+                            "name": "label.tag.kag"
+                        },
+                        {
+                            "match": "([\\w ?.,\\\"_\\-*=\\(\\)]+)",
+                            "captures": {
+                                "1": {
+                                    "name": "string.kag"
+                                }
+                            },
+                            "name": "tag.properties.kag"
+                        }
+                    ],
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.kag"
+                        }
+                    },
+                    "name": "tag.singlequotes.kag"
+                },
+                {
+                    "end": "(\\\")",
+                    "begin": "([\\w]+)\\s*(=)\\s*(\\\")",
+                    "beginCaptures": {
+                        "3": {
+                            "name": "punctuation.definition.string.begin.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "([*])([\\w\\-_]+)",
+                            "captures": {
+                                "0": {
+                                    "name": "storage.type.label.kag"
+                                }
+                            },
+                            "name": "label.tag.kag"
+                        },
+                        {
+                            "match": "([\\w &><;?.,\\'_\\-*=\\(\\)]+)",
+                            "captures": {
+                                "1": {
+                                    "name": "string.kag"
+                                }
+                            },
+                            "name": "tag.properties.kag"
+                        }
+                    ],
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.kag"
+                        }
+                    },
+                    "name": "tag.doublequotes.kag"
+                },
+                {
+                    "match": "([\\w]+)\\s*(=)\\s*([\\w0-9-_]+)",
+                    "captures": {
+                        "3": {
+                            "name": "string.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "name": "tag.noquotes.kag"
+                }
+            ],
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.tag.kag"
+                }
+            },
+            "name": "tag.kag"
+        },
+        {
+            "end": "(\\n)",
+            "begin": "^[ \t]{0,}+@([a-zA-Z0-9_]+)",
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "1": {
+                    "name": "entity.name.tag.kag"
+                }
+            },
+            "patterns": [
+                {
+                    "end": "(')",
+                    "begin": "([\\w]+)\\s*(=)\\s*(')",
+                    "beginCaptures": {
+                        "3": {
+                            "name": "punctuation.definition.string.begin.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "([*])([\\w\\-_]+)",
+                            "captures": {
+                                "0": {
+                                    "name": "storage.type.label.kag"
+                                }
+                            },
+                            "name": "label.tag.kag"
+                        },
+                        {
+                            "match": "([\\w ?.,\\\"_\\-*=\\(\\)]+)",
+                            "captures": {
+                                "1": {
+                                    "name": "string.kag"
+                                }
+                            },
+                            "name": "tag.properties.kag"
+                        }
+                    ],
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.kag"
+                        }
+                    },
+                    "name": "tag.singlequotes.kag"
+                },
+                {
+                    "end": "(\\\")",
+                    "begin": "([\\w]+)\\s*(=)\\s*(\\\")",
+                    "beginCaptures": {
+                        "3": {
+                            "name": "punctuation.definition.string.begin.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "patterns": [
+                        {
+                            "match": "([*])([\\w\\-_]+)",
+                            "captures": {
+                                "0": {
+                                    "name": "storage.type.label.kag"
+                                }
+                            },
+                            "name": "label.tag.kag"
+                        },
+                        {
+                            "match": "([\\w &><;?.,\\'_\\-*=\\(\\)]+)",
+                            "captures": {
+                                "1": {
+                                    "name": "string.kag"
+                                }
+                            },
+                            "name": "tag.properties.kag"
+                        }
+                    ],
+                    "endCaptures": {
+                        "0": {
+                            "name": "punctuation.definition.string.end.kag"
+                        }
+                    },
+                    "name": "tag.doublequotes.kag"
+                },
+                {
+                    "match": "([\\w]+)\\s*(=)\\s*([\\w0-9-_]{0,}+)",
+                    "captures": {
+                        "3": {
+                            "name": "string.kag"
+                        },
+                        "1": {
+                            "name": "entity.other.attribute-name.kag"
+                        },
+                        "2": {
+                            "name": "punctuation.section.tag.kag"
+                        }
+                    },
+                    "name": "tag.noquotes.kag"
+                }
+            ],
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.section.tag.kag"
+                }
+            },
+            "name": "tag.kag"
+        },
+        {
+            "match": "(;)(?!\\[\\[).*$\\n?",
+            "captures": {
+                "1": {
+                    "name": "punctuation.definition.comment.kag"
+                }
+            },
+            "name": "comment.line.semicolon.kag"
+        },
+        {
+            "match": "^\\s*([*])([\\w\\-_]+)\\s*|\\s*([\\w\\-_ ]+?)",
+            "captures": {
+                "3": {
+                    "name": "punctuation.section.tag.kag"
+                },
+                "1": {
+                    "name": "storage.type.label.kag"
+                },
+                "2": {
+                    "name": "storage.type.label.kag"
+                }
+            },
+            "name": "label.kag"
+        }
+    ],
+    "name": "KAG Script",
+    "scopeName": "source.ks"
+}
