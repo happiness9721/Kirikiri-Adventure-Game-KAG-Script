@@ -19,3 +19,8 @@ Finished syntax highlighting.
 ### 0.0.2
 
 Add icon.
+
+### 0.0.3
+
+- You could use @iscript and @endscript now.
+- Change comment symbol form // to ;
